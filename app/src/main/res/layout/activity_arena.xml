@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E3A8A"
+    android:padding="24dp"
+    tools:context=".ArenaActivity">
+
+    <!-- Card de Cabeçalho: Resultado Animado -->
+    <LinearLayout
+        android:id="@+id/headerCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#2563EB"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_lock_silent_mode_off"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Resultado animado"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Movimento e som confirmam cada rodada."
+            android:textColor="#93C5FD"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Área da Disputa (Escolha do Jogador vs Dispositivo) -->
+    <LinearLayout
+        android:id="@+id/matchArea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerCard">
+
+        <!-- Lado do Jogador -->
+        <LinearLayout
+            android:id="@+id/containerPlayer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Você"
+                android:textColor="#93C5FD"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imgPlayerChoice"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="12dp"
+                android:src="@android:drawable/btn_star_big_on"
+                app:tint="#FB923C" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VS"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Lado do Dispositivo -->
+        <LinearLayout
+            android:id="@+id/containerCpu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dispositivo"
+                android:textColor="#93C5FD"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imgCpuChoice"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="12dp"
+                android:src="@android:drawable/ic_menu_crop"
+                app:tint="#FB923C" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Mensagem de Resultado Animada -->
+    <TextView
+        android:id="@+id/txtResultMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Toque no botão para disputar!"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/matchArea" />
+
+    <!-- Botão Disparador de Jogada -->
+    <Button
+        android:id="@+id/btnPlayRound"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#EA580C"
+        android:text="Jogar Rodada"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

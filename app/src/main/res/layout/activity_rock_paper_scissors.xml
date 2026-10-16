@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2563EB"
+    android:fillViewport="true"
+    tools:context=".RockPaperScissorsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- MOCKUP · ESCOLHA / TÍTULO -->
+        <TextView
+            android:id="@+id/txtCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MOCKUP · ESCOLHA"
+            android:textColor="#93C5FD"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Arena"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Escolha sua jogada"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- BOTÕES DE JOGADA (Pedra, Papel, Tesoura) -->
+        <LinearLayout
+            android:id="@+id/choicesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Opção Pedra -->
+            <LinearLayout
+                android:id="@+id/btnRock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@android:drawable/btn_star_big_on"
+                    app:tint="#FB923C" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Pedra"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Opção Papel -->
+            <LinearLayout
+                android:id="@+id/btnPaper"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@android:drawable/ic_menu_agenda"
+                    app:tint="#FB923C" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Papel"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Opção Tesoura -->
+            <LinearLayout
+                android:id="@+id/btnScissors"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@android:drawable/ic_menu_crop"
+                    app:tint="#FB923C" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Tesoura"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Empates não somam pontos."
+            android:textColor="#DBEAFE"
+            android:textSize="14sp" />
+
+        <!-- LINHA DIVISÓRIA -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="24dp"
+            android:background="#60A5FA" />
+
+        <!-- PAINEL DE RESULTADO E PLACAR -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MOCKUP · RESULTADO"
+            android:textColor="#93C5FD"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtRoundResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Vitória, derrota ou empate"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Detalhes da Jogada -->
+        <TextView
+            android:id="@+id/txtMovesComparison"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Jogador × dispositivo"
+            android:textColor="#DBEAFE"
+            android:textSize="16sp" />
+
+        <!-- Placar do Jogo -->
+        <TextView
+            android:id="@+id/txtScoreBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Placar: Você 0 x 0 Dispositivo"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtGameDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Vence quem alcançar duas vitórias primeiro."
+            android:textColor="#DBEAFE"
+            android:textSize="14sp" />
+
+        <!-- Botão Reiniciar Partida -->
+        <Button
+            android:id="@+id/btnNewGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#FFEDD5"
+            android:text="Nova partida"
+            android:textColor="#9A3412"
+            android:textStyle="bold"
+            app:cornerRadius="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="O botão reinicia o placar."
+            android:textColor="#DBEAFE"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

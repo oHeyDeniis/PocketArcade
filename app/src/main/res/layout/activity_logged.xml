@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FAFAFA"
+    tools:context=".LoggedActivity">
+
+
+    <LinearLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+
+        <TextView
+            android:id="@+id/txtGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="40dp"
+            android:text="@string/logged_title"
+            android:textColor="#0F172A"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/cardScanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp"
+
+            >
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:contentDescription="@string/scanner_title"
+                android:src="@android:drawable/ic_dialog_email"
+                app:tint="#EA580C" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scanner_title"
+                    android:textColor="#0F172A"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnOpenScanner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/scanner_desc"
+                    android:textColor="#334155"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cardArena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:contentDescription="@string/arena_title"
+                android:src="@android:drawable/ic_menu_crop"
+                app:tint="#EA580C" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/arena_title"
+                    android:textColor="#0F172A"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnOpenArena"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/arena_desc"
+                    android:textColor="#334155"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cardSecretCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:contentDescription="@string/secret_title"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                app:tint="#EA580C" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secret_title"
+                    android:textColor="#0F172A"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnOpenSecretCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/secret_desc"
+                    android:textColor="#334155"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cardRandomizer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="150dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:contentDescription="@string/radom_title"
+                android:src="@android:drawable/ic_menu_directions"
+                app:tint="#EA580C" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radom_title"
+                    android:textColor="#0F172A"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnOpenRandomizer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/random_desc"
+                    android:textColor="#334155"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="32dp"
+            android:background="#E2E8F0" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginBottom="32dp"
+            android:text="Encerrar Sessão"
+            android:textColor="#EF4444"
+            app:strokeColor="#EF4444" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">PocketArcade</string>
+    <string name="main_title">Pocket Arcade</string>
+    <string name="main_student_text">Denis Teles Marciano º 20252012000439 ° ADS</string>
+    <string name="main_nick_title">Apelido</string>
+    <string name="main_nick_input_hint">Apelido</string>
+    <string name="main_button_text">Entrar</string>
+    <string name="project_type">Individual</string>
+    <string name="logged_title">Olá, jogador!</string>
+    <string name="scanner_title">Scanner</string>
+    <string name="scanner_desc">Analise uma mensagem · Abrir</string>
+    <string name="arena_title">Arena</string>
+    <string name="arena_desc">Dispute melhor de três · Abrir</string>
+    <string name="secret_title">Código Secreto</string>
+    <string name="secret_desc">Descubra os dígitos · Abrir</string>
+    <string name="radom_title">Randomizador</string>
+    <string name="random_desc">Sorteie por categoria · Abrir</string>
 </resources>
